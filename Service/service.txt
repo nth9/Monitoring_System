@@ -1,0 +1,55 @@
+[Unit]
+Description=Run sensor_main_newfunction.py at startup
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 /home/rpiq/test07/sensor_main_newfunction.py
+Restart=always
+RestartSec=30
+User=root
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
+
+
+[Unit]
+Description=Run 2d_3d_plot.py at startup
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 /home/rpiq/test07/2d_3d_plot.py
+Restart=always
+RestartSec=30
+User=pi
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
+
+
+
+sudo nano /etc/systemd/system/sensor_main_newfunction.service
+sudo nano /etc/systemd/system/2d_3d_plot.service
+
+
+
+sudo systemctl enable sensor_main_newfunction.service
+sudo systemctl start sensor_main_newfunction.service
+sudo systemctl enable 2d_3d_plot.service
+sudo systemctl start 2d_3d_plot.service
+
+
+
+sudo systemctl status sensor_main_newfunction.service
+sudo systemctl status 2d_3d_plot.service
+
+
+sudo journalctl -u sensor_main_newfunction.service
+sudo journalctl -u 2d_3d_plot.service
+
+
+sudo journalctl -u sensor_main_newfunction.service -f
+sudo journalctl -u 2d_3d_plot.service -f

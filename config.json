@@ -1,0 +1,54 @@
+{
+  "temperature_folder_path": "./Temperature_data",
+  "limit_switch_folder_path": "./Door_status_data",
+  "delete_old_files": [30, false],
+  "limit_switch_pin": 26,
+  "temperature_update_interval": 2,
+  "sensors_update_interval": 2,
+  "last_minutes": 60,
+  "colorbar": [0,30],
+  "room_dimensions": [6, 4.2, 4.2],
+  "boxes": [
+    {
+      "dimensions": [0.8, 1, 2.5], "position": [3, 2, 0],
+      "color": "black", "opacity": 0.1, "name": "rack"
+    },
+    {
+      "dimensions": [0.8, 1, 2.5], "position": [4, 2, 0],
+      "color": "black", "opacity": 0.1, "name": "rack"
+    },
+    {
+      "dimensions": [0.8, 1, 2.5], "position": [5, 2, 0],
+      "color": "black", "opacity": 0.1, "name": "rack"
+    },
+    {
+      "dimensions": [0.1, 2, 2.5], "position": [0, 0, 0],
+      "color": "black", "opacity": 0.2, "name": "door"
+    }
+  ],
+  "sensor_data": [
+    {"position": [1.2, 0, 3.5], "pin": "D17", "error": 0},
+    {"position": [1.2, 0, 0.5], "pin": "D27", "error": 0},
+
+    {"position": [4.2, 0, 3.5], "pin": "D22", "error": 0},
+    {"position": [4.2, 0, 0.5], "pin": "D10", "error": 0},
+
+    {"position": [4.2, 4, 3.5], "pin": "D9", "error": 0},
+    {"position": [4.2, 4, 0.5], "pin": "D14", "error": 0},
+
+    {"position": [1.2, 4, 3.5], "pin": "D15", "error": 0},
+    {"position": [1.2, 4, 0.5], "pin": "D18", "error": 0},
+
+    {"position": [4.4, 1.9, 1.8], "pin": "D23", "error": 0},
+    {"position": [4.4, 3.1, 1.8], "pin": "D24", "error": 0}
+  ],
+  "email_config": {
+    "sender_email": "Temperature.Alerttt@gmail.com",
+    "sender_password": "bzkeavvkdgmvbhna",
+    "recipient_email": ["temperaturealert@googlegroups.com"],
+    "smtp_server": "smtp.gmail.com",
+    "smtp_port": 587,
+    "upper_bound": 25,
+    "lower_bound": 24
+  }
+}
