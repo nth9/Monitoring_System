@@ -1,3 +1,5 @@
+import sys
+sys.path.append("/home/rpiq/.local/lib/python3.10/site-packages")
 import dash
 from dash import dcc, html
 from dash.dependencies import Input, Output
@@ -207,10 +209,8 @@ def create_3d_map(df,doorOpen):
 #####################################################################################
 
 # Load configuration from config.json
-config_path = os.getenv("CONFIG_PATH", "config.json")
-with open(config_path) as f:
+with open('test07/config.json') as f:
     config = json.load(f)
-
 temp_folder_path = config["temperature_folder_path"]
 door_folder_path = config["limit_switch_folder_path"]
 last_seconds = config['last_minutes']*60
@@ -321,5 +321,5 @@ def update_graph(n):
 
 # Run the app
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=8053 ,debug=True)
+    app.run(host='0.0.0.0', port=8050 ,debug=True)
     #app.run_server(debug=True)

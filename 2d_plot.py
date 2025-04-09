@@ -1,4 +1,5 @@
 import sys
+sys.path.append("/home/rpiq/.local/lib/python3.10/site-packages")
 import os
 import json
 import pandas as pd
@@ -141,4 +142,4 @@ def update_output(n_clicks, date_str):
     return go.Figure(), ""
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=8054)
+    app.run(host='0.0.0.0', port=8052)
