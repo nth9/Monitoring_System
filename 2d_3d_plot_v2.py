@@ -1,5 +1,3 @@
-import sys
-sys.path.append("/home/rpiq/.local/lib/python3.10/site-packages")
 import dash
 from dash import dcc, html
 from dash.dependencies import Input, Output

@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  monitor-system:
+    image: registry.gitlab.com/YOUR_USERNAME/YOUR_PROJECT:katsedon-v1
+    container_name: monitor-system
+    restart: unless-stopped
+    ports:
+      - "8052:8052"
+      - "8055:8055"
+    devices:
+      - /dev/gpiomem
+      - /dev/mem
+    volumes:
+      - /home/pi/data:/app/data
+      - /home/pi/logs:/app/logs
+      - /home/pi/Temperature_data:/app/Temperature_data
+      - /home/pi/Door_status_data:/app/Door_status_data

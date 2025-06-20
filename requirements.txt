@@ -1,0 +1,19 @@
+# Core Python Libraries (automatically included in Python, but listed for clarity)
+datetime
+json
+os
+sys
+time
+smtplib
+email
+signal
+
+# External Packages (must be installed)
+adafruit-circuitpython-dht
+board
+gpiozero
+digitalio
+pandas
+plotly
+dash
+numpy
